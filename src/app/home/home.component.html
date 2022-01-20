@@ -1,0 +1,72 @@
+<body>
+    <div>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="assets/images/main.jpg" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/images/2.jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="assets/images/3.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>We love the Big Apple!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+    <h2>Most Popular Designs</h2>
+
+     <div class="row"> 
+        <div class="column" style="margin: 45px; width:17%" *ngFor= "let item of cards | filter:searchText">
+            <div class="card">
+                <div class="profile-pic">
+                    <img class="" src="{{item.image}}">
+                    <button class="btn btn-infobtn-sm trash" (click)= "DeleteProduct(item)" title="Delete">
+                    <span class="fa fa-trash-o fa-lg"></span>
+                    </button>
+                    <button class="btn btn-infobtn-sm edit" placement ="left" (click)= "EditProduct(item)" title="Edit">
+                        <span class="fa fa-pencil fa-lg"></span>
+                        </button>
+                        <button class="btn btn-infobtn-sm eye" placement ="left" (click)= "ViewProduct(item)" title="View">
+                            <span class="fa fa-eye fa-lg"></span>
+                            </button>
+                    <h6>{{item.productname}}</h6>
+                    <b>Rs.{{item.price}}</b>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,19 @@
+h2{
+    color:brown;
+}
+h4{
+    color:darkviolet;
+}
+a:active{
+    color:yellow;
+}
+img{
+    border-radius:10px;
+    width: 92px;
+    height: 52px;
+}
+.search-hero{
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin: auto;
+}

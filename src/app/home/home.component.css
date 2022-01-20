@@ -1,0 +1,52 @@
+body {
+    background: red;
+}
+h2 {
+    background: white;
+}
+.profile-pic{
+    position: relative;
+    display: inline-block;
+}
+.profile-pic:hover .edit{
+    display:block;
+}
+.profile-pic:hover .eye{
+    display:block;
+}
+.profile-pic:hover .trash{
+    display:block;
+}
+.edit{
+    padding-top:35px;
+    padding-right: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.eye{
+    padding-bottom:10px;
+    padding-right: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.trash{
+    padding-top:70px;
+    padding-right: 7px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+.edit a{
+    color: #000;
+}
+.eye a{
+    color: black;
+}
+.trash a{
+    color:black;
+}

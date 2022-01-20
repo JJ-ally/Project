@@ -1,0 +1,150 @@
+{
+  "cards": [
+    {
+      "productname": "LIME",
+      "price": "999",
+      "quantity": "2",
+      "image": "assets/images/image1.jpg",
+      "description": "Women lon a line kurthi sets",
+      "id": "1",
+      "noofviews": 32
+    },
+    {
+      "productname": "VISHUD",
+      "price": "800",
+      "quantity": "2",
+      "image": "assets/images/iKurta1.jpg",
+      "description": "Women Kurtha georgeous sets",
+      "id": "12",
+      "noofviews": 63
+    },
+    {
+      "productname": "SOCH",
+      "price": "750",
+      "quantity": "2",
+      "image": "assets/images/image2.jpg",
+      "description": "Women Kurtha",
+      "id": "14",
+      "noofviews": 14
+    },
+    {
+      "productname": "LIBAS",
+      "price": "1299",
+      "quantity": "2",
+      "image": "assets/images/image5.jpg",
+      "description": "Women Kurtha",
+      "id": "19",
+      "noofviews": 49
+    },
+    {
+      "productname": "GERUA",
+      "price": "1100",
+      "quantity": "2",
+      "image": "assets/images/image3.jpg",
+      "description": "Women Kurtha",
+      "id": "11",
+      "noofviews": 91
+    },
+    {
+      "productname": "GERUA",
+      "price": "1100",
+      "quantity": "2",
+      "image": "assets/images/image4.jpg",
+      "description": "Women Kurtha",
+      "id": "11",
+      "noofviews": 21
+    },
+    {
+      "productname": "GERUA",
+      "price": "1100",
+      "quantity": "2",
+      "image": "assets/images/image5.jpg",
+      "description": "Women Kurtha",
+      "id": "11",
+      "noofviews": 44
+    },
+    {
+      "productname": "GERUA",
+      "price": "1100",
+      "quantity": "2",
+      "image": "assets/images/image6.jpg",
+      "description": "Women Kurtha",
+      "id": "11",
+      "noofviews": 31
+    },
+    {
+      "productname": "STELLA",
+      "price": "456",
+      "quantity": "1",
+      "image": "assets/images/image1.jpg",
+      "description": "new long kurthi setd",
+      "id": "ZT7Yo2a"
+    },
+    {
+      "productname": "DECK",
+      "price": "1245",
+      "quantity": "2",
+      "image": "assets/images/image3.jpg",
+      "description": "Ethnic kurtha dress rare type",
+      "id": "qJHXZWN"
+    },
+    {
+      "productname": "rrrrrrrrrrrrr",
+      "price": "1111",
+      "quantity": "1",
+      "image": "assets/images/image3.jpg",
+      "description": "fffffffffffffffffffffffffffffff",
+      "id": "gWQTHT1"
+    },
+    {
+      "productname": "fff",
+      "price": "333",
+      "quantity": "3",
+      "image": "assets/images/image4.jpg",
+      "description": "wwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "id": "-FDGkP4"
+    },
+    {
+      "productname": "rrrrrrrr",
+      "price": "333",
+      "quantity": "2",
+      "image": "assets/images/image4.jpg",
+      "description": "rrrrrrrrrrrrrggggggggggggggggg",
+      "id": "saH8wM9"
+    }
+  ],
+  "users": [
+    {
+      "firstname": "jensha",
+      "lastname": "jose",
+      "email": "test@mail.com",
+      "password": "123456",
+      "location": "banglore",
+      "id": 1
+    },
+    {
+      "firstname": "aneesh",
+      "lastname": "scaria",
+      "email": "check@mail.com",
+      "password": "123456",
+      "location": "chennai",
+      "id": 2
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456",
+      "firstname": "jj",
+      "lastname": "gt",
+      "location": "bbbbbb",
+      "id": 3
+    },
+    {
+      "email": "abc@mail.com",
+      "password": "123456",
+      "firstname": "gth",
+      "lastname": "frb",
+      "location": "nnnnnn",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-nav">
+      <a class="navbar-brand">
+
+      </a>
+      <a class="nav-item nav-link" routerLink="/about" style ="padding-top: 5%;">About</a>
+      <a class="nav-item nav-link" routerLink="/home" style ="padding-top: 5%;">Home</a>
+      <a class="nav-item nav-link" (click)= "AddProduct()" style ="padding-top: 5%;">Add Product</a>
+      <a class="nav-item nav-link" (click)= "ViewChart()" style ="padding-top: 5%;">Chart</a>
+      <a class="nav-item nav-link" (click)= "ViewUsersList()" style ="padding-top: 5%;">User</a>
+      <a routerLink="login" style ="padding-top: 5%;"routerLinkActive="active">Login  </a>
+      <a routerLink="logout" style ="padding-top: 5%;" routerLinkActive="active" (click)= "changeToLogin()">  Logout</a>
+    </div>
+  </nav>
+  <div>
+      <router-outlet></router-outlet>
+  </div>
+  
+  </body>
