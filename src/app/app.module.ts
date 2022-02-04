@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,13 +21,17 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgChartsModule } from 'ng2-charts';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ToastrModule } from 'ngx-toastr';
+import { ProductService } from './services/product.service';
+import { ProductGuardGuard } from './services/product-guard.guard';
+import { NotificationService } from './services/notification.service';
+import { HomeModule } from './home/home.module';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     ProductComponent,
     RegisterComponent,
@@ -53,9 +56,11 @@ import { ToastrModule } from 'ngx-toastr';
     MatSliderModule,
     Ng2SearchPipeModule,
     NgChartsModule,
+    HomeModule,
+    NgMultiSelectDropDownModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [ProductService,ProductGuardGuard,NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

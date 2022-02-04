@@ -22,6 +22,15 @@ export class HomeComponent implements OnInit {
   viewitem = 0;
   product: Product;
   products: Product[];
+  dropdownList:Array<any>;
+  selectedItems:Array<any>;
+  dropdownSettings:{};
+  enableProductName =false;
+  enablePrice =false;
+  enableQuantity =false;
+  marked=false;
+  theCheckbox=false;
+  checkedItems:Array<any>;
 
   constructor(private router: Router, private productService: ProductService, private auth: AuthService, private userservice: UserService) {
     this.auth.currentUser.subscribe(user => {
@@ -33,7 +42,67 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.myServices();
     this.shares = this.cards;
+    this.dropdownList= [
+      { item_id:1, item_text:'ProductName'},
+      { item_id:2, item_text:'Price'},
+      { item_id:3, item_text:'Quantity'}
+    ];
+    this.dropdownSettings ={
+      singleSelection :false,
+      idField:'item_id',
+      textFiled:'item_text',
+      selectAllText:'Select All',
+      unSelectAllText:'UnSelect All',
+      itemsShowLimt:2,
+      allowSearchFilter:true
+    };
+    this.enableProductName = true;
+
   }
+  onItemSelect(item:any){
+    if(item != null){
+      if(item.item_text =="ProductName")
+      this.enableProductName =true;
+      if(item.item_text =="Price")
+      this.enablePrice =true;
+      if(item.item_text =="Quantity")
+      this.enableQuantity =true;
+    }
+  }
+  onSelectAll(item:any){
+    this.enableProductName = true;
+    this.enablePrice =true;
+    this.enableQuantity =true;
+  }
+  onItemDeselectAll(item:any): void{
+    if(item != null){
+      if(item.item_text =="ProductName")
+      this.enableProductName =false;
+      if(item.item_text =="Price")
+      this.enablePrice =false;
+      if(item.item_text =="Quantity")
+      this.enableQuantity =false;
+    }
+  }
+  onDeSelectAll(item:any){
+    this.enableProductName = false;
+    this.enablePrice =false;
+    this.enableQuantity =false;
+  }
+  OnCheckBoxChange(item,checkedItems:any){
+    if(checkedItems.target.checked){
+      this.checkedItems.push(item.id);
+    }
+    else{
+      for(var i =0;i<this.cards.length; i++){
+        if(this.checkedItems[i] == item.id){
+          this.checkedItems.splice(i,1);
+        }
+      }
+    }
+    
+  }
+
   myServices() {
     this.productService.getConfig().subscribe
       ((data) =>

@@ -1,6 +1,8 @@
 <body>
     <div>
         <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search">
+        <ng-multiselect-dropdown placeholder="CustomFilter" [data]= "dropdownList" [(ngModel)] ="selectedItems" [settings]="dropdownSettings"
+        (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)" (onDeSelect)="onItemDeselectAll($event)" (onDeSelectAll)="onDeSelectAll($event)" name ="Servers" #Servers ="ngModel" required></ng-multiselect-dropdown>
     </div>
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -62,8 +64,9 @@
                         <button class="btn btn-infobtn-sm eye" placement ="left" (click)= "ViewProduct(item)" title="View">
                             <span class="fa fa-eye fa-lg"></span>
                             </button>
-                    <h6>{{item.productname}}</h6>
-                    <b>Rs.{{item.price}}</b>
+                    <h6 *ngIf="enableProductName">{{item.productname}}</h6>
+                    <b *ngIf="enablePrice">Rs.{{item.price}}</b>
+                    <input class="check" type="checkbox" value="{{item.id}}" (change)="OnCheckBoxChange(item,$event)">
 
                 </div>
             </div>

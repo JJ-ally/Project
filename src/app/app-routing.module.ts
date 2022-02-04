@@ -20,6 +20,7 @@ const routes: Routes = [
   { path:'chart',component:ChartComponent},
   { path:'view-users',component:ViewUsersComponent},
   { path:'edit-product',component:EditProductComponent},
+  { path:'',loadChildren:() => import('./home/home.module').then(m => m.HomeModule)},
   { path:'**',redirectTo:''}
 ];
 

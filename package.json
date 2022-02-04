@@ -26,6 +26,7 @@
     "chartjs-plugin-datalabels": "^2.0.0",
     "chartsjs-plugin-data-labels": "^0.1.5",
     "json-server": "^0.17.0",
+    "ng-multiselect-dropdown": "^0.3.8",
     "ng2-charts": "^3.0.6",
     "ng2-search-filter": "^0.5.1",
     "ngx-toastr": "^14.2.1",

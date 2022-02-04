@@ -50,3 +50,6 @@ h2 {
 .trash a{
     color:black;
 }
+ng-multiselect-dropdown {
+    background: white;
+}
